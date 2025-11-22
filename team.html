@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Youth Infomatic - Trải nghiệm công nghệ hiện đại, tinh tế và sang trọng">
+    <title>Youth Infomatic</title>
+    
+    <!-- Google Fonts - Thanh mảnh, hiện đại, sang trọng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS chính -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Kiểm tra JavaScript - thông báo fallback nếu JavaScript bị tắt -->
+    <noscript>
+        <div style="padding: 20px; text-align: center; background: #1a1a1e; color: #fff;">
+            ⚠️ Vui lòng bật JavaScript để trải nghiệm trang web đầy đủ.
+        </div>
+    </noscript>
+
+    <!-- ========== HEADER – Logo, Menu, CTA ========== -->
+    <header class="header" data-component="header">
+        <div class="header-container">
+            <!-- Logo – Bên trái -->
+            <div class="logo">
+                <span class="logo-icon"><img src="logo.png" alt="logo"></span>
+                <span class="logo-text">Youth Informatic</span>
+            </div>
+
+            <!-- Menu chính – Ẩn trên mobile, hiển thị trên desktop -->
+            <nav class="nav-desktop" aria-label="Menu chính">
+                <a href="index.html" class="nav-link">Home Page</a>
+                <a href="team.html" class="nav-link">Member</a>
+                <a href="Announcements.html" class="nav-link">Announcements</a>
+                <a href="doc.html" class="nav-link">Docs</a>
+            </nav>
+
+            <!-- Nút CTA + Theme Toggle + Hamburger -->
+            <div class="header-actions">
+                <button class="btn-theme" data-theme-toggle aria-label="Chuyển đổi theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="btn-primary btn-header" data-modal-trigger="cta-modal" aria-label="Tham gia">
+                    Join Now
+                </button>
+                <button class="hamburger" data-menu-toggle aria-expanded="false" aria-label="Menu di động">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu di động – slide-in từ phải -->
+        <nav class="nav-mobile" data-mobile-menu aria-hidden="true">
+           <a href="index.html" class="nav-link">Home Page</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="Announcements.html" class="nav-link">Announcements</a>
+                <a href="doc.html" class="nav-link">Docs</a>
+            <button class="btn-primary" style="width: 100%;">Join Now</button>
+        </nav>
+    </header>
+    <body>
+                  <section class="team reveal" id="team" data-component="team">
+        <div class="team-container">
+            <div class="section-header">
+                <h2>Thành Viên</h2>
+                <p>Hiện tại câu lạc bộ gồm có 12 thành viên</p>
+            </div>
+            <!-- Container để JS render team card -->
+             <div id="team"></div>
+            <div class="team-grid" data-team-container></div>
+        </div>
+    </section>
+
+            <footer class="footer">
+        <div class="footer-container">
+            <!-- Cột 1: Logo & Description -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <span class="logo-icon"><img src="logo.png" alt=""></span>
+                    <span class="logo-text">Youth Infomatic</span>
+                </div>
+                <p class="footer-desc">Nâng cao kỹ năng lập trình trong thời đại số.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61583913066673" target="_blank" aria-label="FACE" class="social-link">FB</a>
+                </div>
+            </div>
+
+            <!-- Cột 2: Product -->
+            <div class="footer-column">
+                <h3 class="footer-title">Product</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Home Page</a></li>
+                    <li><a href="#" class="footer-link">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Resources -->
+            <div class="footer-column">
+                <h3 class="footer-title">Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Documentation</a></li>
+                    <li><a href="#" class="footer-link">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4: Company -->
+            <div class="footer-column">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Copyright & Legal -->
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Youth Infomatic. Mọi quyền được bảo lưu.</p>
+            <div class="footer-legal">
+                <a class="legal-link">Privacy Policy</a>
+                <a class="legal-link">Terms of Service</a>
+                <a class="legal-link">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL – CTA Modal ========== -->
+    <div class="modal" id="cta-modal" data-modal aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-modal-backdrop></div>
+        <div class="modal-content">
+            <button class="modal-close" data-modal-close aria-label="Đóng modal">✕</button>
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Tham Gia Youth Infomatic</h2>
+                <p class="modal-subtitle">Bắt đầu hành trình công nghệ của bạn ngay hôm nay</p>
+            </div>
+            <form class="modal-form" data-form>
+                <input type="text" placeholder="Tên của bạn" class="form-input" required>
+                <input type="email" placeholder="Email của bạn" class="form-input" required>
+                <button type="submit" class="btn-primary" style="width: 100%;">Get Started</button>
+            </form>
+            <p class="modal-footnote">Thông tin cá nhân của bạn sẽ luôn được bảo mật.</p>
+        </div>
+    </div>
+                <script src="team.js" defer></script>
+    </body>
+   </html>
