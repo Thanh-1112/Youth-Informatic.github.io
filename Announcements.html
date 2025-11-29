@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Youth Infomatic - Trải nghiệm công nghệ hiện đại, tinh tế và sang trọng">
-    <title>Youth Infomatic</title>
-    
-    <!-- Google Fonts - Thanh mảnh, hiện đại, sang trọng -->
+    <meta name="description" content="Youth Infomatic - Thông báo & Thành tựu">
+    <title>Announcements — Youth Infomatic</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS chính -->
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Kiểm tra JavaScript - thông báo fallback nếu JavaScript bị tắt -->
     <noscript>
         <div style="padding: 20px; text-align: center; background: #1a1a1e; color: #fff;">
             ⚠️ Vui lòng bật JavaScript để trải nghiệm trang web đầy đủ.
         </div>
     </noscript>
 
-    <!-- ========== HEADER – Logo, Menu, CTA ========== -->
+    <!-- Header -->
     <header class="header" data-component="header">
         <div class="header-container">
-            <!-- Logo – Bên trái -->
             <div class="logo">
                 <span class="logo-icon"><img src="logo.png" alt="logo"></span>
                 <span class="logo-text">Youth Informatic</span>
             </div>
 
-            <!-- Menu chính – Ẩn trên mobile, hiển thị trên desktop -->
             <nav class="nav-desktop" aria-label="Menu chính">
                 <a href="index.html" class="nav-link">Home Page</a>
                 <a href="team.html" class="nav-link">Team</a>
@@ -39,36 +36,75 @@
                 <a href="doc.html" class="nav-link">Docs</a>
             </nav>
 
-            <!-- Nút CTA + Theme Toggle + Hamburger -->
             <div class="header-actions">
-                <button class="btn-theme" data-theme-toggle aria-label="Chuyển đổi theme">
+                <button class="btn-theme" data-theme-toggle aria-label="Chuyển đổi theme"> 
                     <span class="theme-icon">🌙</span>
                 </button>
-                <button class="btn-primary btn-header" data-modal-trigger="cta-modal" aria-label="Tham gia">
-                    Join Now
-                </button>
+                <button class="btn-primary btn-header" data-modal-trigger="cta-modal" aria-label="Tham gia">Join Now</button>
                 <button class="hamburger" data-menu-toggle aria-expanded="false" aria-label="Menu di động">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
 
-        <!-- Menu di động – slide-in từ phải -->
         <nav class="nav-mobile" data-mobile-menu aria-hidden="true">
-           <a href="index.html" class="nav-link">Home Page</a>
-                <a href="team.html" class="nav-link">Member</a>
-                <a href="Announcements.html" class="nav-link">Announcements</a>
-                <a href="doc.html" class="nav-link">Docs</a>
-            <button class="btn-primary" style="width: 100%;">Join Now</button>
+            <a href="index.html" class="nav-link">Home Page</a>
+            <a href="team.html" class="nav-link">Team</a>
+            <a href="Announcements.html" class="nav-link">Announcements</a>
+            <a href="doc.html" class="nav-link">Docs</a>
+            <button class="btn-primary" style="width:100%">Join Now</button>
         </nav>
-            
     </header>
-    <body>
-            <footer class="footer">
+
+    <!-- Main: Announcements -->
+    <main>
+        <section class="announcement reveal" id="announcement" data-component="announcement">
+            <div class="announcement-container">
+                <!-- Left: Announcement list -->
+                <div>
+                    <div class="section-header">
+                        <h2>Thông Báo & Thành Tựu</h2>
+                        <p>Những cập nhật mới nhất từ Youth Informatic — sự kiện, giải thưởng và thông báo quan trọng.</p>
+                    </div>
+
+                    <div class="announcement-list" id="announcement-list">
+                        <!-- JS will render announcement items here -->
+                    </div>
+                </div>
+
+                <!-- Right: Summary / Highlights -->
+                <aside class="announcement-side">
+                    <div class="announcement-card">
+                        <span class="announcement-badge">🏆 Nổi bật</span>
+                        <h3 class="announcement-title" style="font-size:20px;">Sự kiện sắp tới</h3>
+                        <p class="announcement-text">Đăng ký tham gia <strong>01/12/2025</strong>. Số lượng hạn chế.</p>
+                        <div class="announcement-features" style="margin-top:12px">
+                            <span class="badge">⏱️ Hạn nộp: 01/12/2025</span>
+                            <span class="badge">📍 Địa điểm: Trực tuyến</span>
+                            <span class="badge">💼 Quà Tặng: Voucher & CNTT</span>
+                        </div>
+                        <div style="margin-top:18px">
+                            <a href="#submit-announcement" class="btn-secondary" id="btn-submit-announcement">Gửi Thông Báo →</a>
+                        </div>
+                    </div>
+
+                    <div class="announcement-metric">
+                        <div class="metric-value">> 10</div>
+                        <div class="metric-label">Chứng chỉ</div>
+                    </div>
+
+                    <div class="announcement-metric">
+                        <div class="metric-value">> 03</div>
+                        <div class="metric-label">Giải thưởng lớn</div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (reused) -->
+    <footer class="footer">
         <div class="footer-container">
-            <!-- Cột 1: Logo & Description -->
             <div class="footer-column">
                 <div class="footer-logo">
                     <span class="logo-icon"><img src="logo.png" alt=""></span>
@@ -80,7 +116,6 @@
                 </div>
             </div>
 
-            <!-- Cột 2: Product -->
             <div class="footer-column">
                 <h3 class="footer-title">Product</h3>
                 <ul class="footer-links">
@@ -89,7 +124,6 @@
                 </ul>
             </div>
 
-            <!-- Cột 3: Resources -->
             <div class="footer-column">
                 <h3 class="footer-title">Resources</h3>
                 <ul class="footer-links">
@@ -98,7 +132,6 @@
                 </ul>
             </div>
 
-            <!-- Cột 4: Company -->
             <div class="footer-column">
                 <h3 class="footer-title">Company</h3>
                 <ul class="footer-links">
@@ -108,10 +141,8 @@
             </div>
         </div>
 
-        <!-- Divider -->
         <div class="footer-divider"></div>
 
-        <!-- Copyright & Legal -->
         <div class="footer-bottom">
             <p class="copyright">© 2025 Youth Infomatic. Mọi quyền được bảo lưu.</p>
             <div class="footer-legal">
@@ -122,7 +153,7 @@
         </div>
     </footer>
 
-    <!-- ========== MODAL – CTA Modal ========== -->
+    <!-- CTA Modal (reused) -->
     <div class="modal" id="cta-modal" data-modal aria-hidden="true" role="dialog" aria-labelledby="modal-title">
         <div class="modal-backdrop" data-modal-backdrop></div>
         <div class="modal-content">
@@ -139,6 +170,103 @@
             <p class="modal-footnote">Thông tin cá nhân của bạn sẽ luôn được bảo mật.</p>
         </div>
     </div>
-                <script src="script.js" defer></script>
-    </body>
-   </html>
+
+    <!-- Inline script to render announcements (keeps behavior with your script.js) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const announcements = [
+                {
+                    id: 1,
+                    date: '2025-11-10',
+                    title: 'Mini Hackathon SUI - Kết quả & Tổng kết',
+                    summary: 'Chúc mừng các đội đoạt giải và cảm ơn tất cả thành viên đã tham gia.',
+                    tags: ['Hackathon', 'Kết quả']
+                },
+                {
+                    id: 2,
+                    date: '2025-10-22',
+                    title: 'AI in Business 2025 - Báo cáo tham dự',
+                    summary: 'Đoàn Youth Informatic đã tham gia và trình bày các case study về AI trong doanh nghiệp.',
+                    tags: ['Sự kiện', 'AI']
+                },
+                {
+                    id: 3,
+                    date: '2025-09-18',
+                    title: 'Tuyển thành viên mới - Khai giảng khóa học',
+                    summary: 'Mở đơn đăng ký cho khoá học Front-End cơ bản và Back-End nâng cao.',
+                    tags: ['Tuyển dụng', 'Học tập']
+                }
+            ];
+
+            const list = document.getElementById('announcement-list');
+
+            function render() {
+                list.innerHTML = '';
+                announcements.forEach(a => {
+                    const item = document.createElement('article');
+                    item.className = 'announcement-card reveal';
+                    item.innerHTML = `
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+                            <div style="flex:1;">
+                                <div style="display:flex;gap:12px;align-items:center;">
+                                    <span class="announcement-badge">${a.tags[0] || 'Thông báo'}</span>
+                                    <h3 style="margin:0;font-size:18px;">${a.title}</h3>
+                                </div>
+                                <p class="announcement-text" style="margin-top:8px;">${a.summary}</p>
+                            </div>
+                            <div style="text-align:right;min-width:110px;">
+                                <div style="font-size:13px;color:var(--text-secondary);">${a.date}</div>
+                                <a href="#" class="btn-secondary" style="margin-top:12px;display:inline-block;">Chi tiết</a>
+                            </div>
+                        </div>
+                    `;
+                    list.appendChild(item);
+                });
+
+                // trigger reveal observer if present (script.js sets it up)
+                const event = new Event('content:updated');
+                document.dispatchEvent(event);
+            }
+
+            render();
+
+            // Optional: setup simple search/filter
+            const searchInput = document.createElement('input');
+            searchInput.placeholder = 'Tìm kiếm thông báo...';
+            searchInput.className = 'form-input announcement-search';
+            searchInput.setAttribute('aria-label', 'Tìm kiếm thông báo');
+            searchInput.addEventListener('input', (e) => {
+                const q = e.target.value.toLowerCase();
+                const filtered = announcements.filter(a => (a.title + ' ' + a.summary + ' ' + a.tags.join(' ')).toLowerCase().includes(q));
+                list.innerHTML = '';
+                filtered.forEach(a => {
+                    const item = document.createElement('article');
+                    item.className = 'announcement-card reveal';
+                    item.innerHTML = `
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+                            <div style="flex:1;">
+                                <div style="display:flex;gap:12px;align-items:center;">
+                                    <span class="announcement-badge">${a.tags[0] || 'Thông báo'}</span>
+                                    <h3 style="margin:0;font-size:18px;">${a.title}</h3>
+                                </div>
+                                <p class="announcement-text" style="margin-top:8px;">${a.summary}</p>
+                            </div>
+                            <div style="text-align:right;min-width:110px;">
+                                <div style="font-size:13px;color:var(--text-secondary);">${a.date}</div>
+                                <a href="#" class="btn-secondary" style="margin-top:12px;display:inline-block;">Chi tiết</a>
+                            </div>
+                        </div>
+                    `;
+                    list.appendChild(item);
+                });
+            });
+
+            // insert search above list
+            const section = document.getElementById('announcement');
+            section.querySelector('.section-header').appendChild(searchInput);
+        });
+    </script>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
